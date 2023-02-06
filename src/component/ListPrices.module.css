@@ -1,0 +1,42 @@
+#priceContainer{
+    border: 1px solid black;
+    width: 350px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#title{
+    background-color: rgb(209, 207, 207);
+    padding: 15px;
+    text-align: center;
+}
+
+#content{
+    text-align: center;
+    padding: 15px;
+}
+
+#prices{
+    padding: 10px;
+}
+
+h5{
+    padding: 3px;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+button{
+    border: none;
+    padding: 10px;
+    background-color: gold;
+    font-size: 18px;
+}
+
+#des{
+    padding: 3px;
+}

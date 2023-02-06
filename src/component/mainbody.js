@@ -1,5 +1,7 @@
 import classes from './mainbody.module.css'
 import ListFeatures from './ListFeatures'
+import ListPrices from './ListPrices'
+import Footer from './Footer'
 
 const Mainbody = () => {
 
@@ -33,6 +35,7 @@ const Mainbody = () => {
             des1: "Lorem ipsum.",
             des2: "Lorem ipsum.",
             des3: "Lorem ipsum.",
+            des4: "Lorem ipsum.",
         },
         {
             id: 2,
@@ -42,6 +45,7 @@ const Mainbody = () => {
             des1: "Lorem ipsum.",
             des2: "Lorem ipsum.",
             des3: "Lorem ipsum.",
+            des4: "Lorem ipsum.",
         },
         {
             id: 3,
@@ -51,6 +55,7 @@ const Mainbody = () => {
             des1: "Lorem ipsum.",
             des2: "Lorem ipsum.",
             des3: "Lorem ipsum.",
+            des4: "Lorem ipsum.",
         },
     ]
 return(
@@ -64,8 +69,10 @@ return(
             {content.map(item => <ListFeatures content={item} key={item.id}/>)}
         </div>
         <div id={classes.prices}>
-            
+            {prices.map(item => <ListPrices content={item} key={item.id}/>)}
         </div>
+        <div id={classes.footer}>
+        <Footer /></div>
     </div>
 )
 }

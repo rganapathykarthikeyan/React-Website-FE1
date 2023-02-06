@@ -1,0 +1,10 @@
+#footer{
+    background-color: rgb(209, 207, 207);
+    width: 75%;
+    padding: 10px;
+    text-align: right;
+}
+
+#link a{
+    padding: 5px;
+}
