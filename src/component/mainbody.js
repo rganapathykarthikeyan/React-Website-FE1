@@ -2,6 +2,7 @@ import classes from './mainbody.module.css'
 import ListFeatures from './ListFeatures'
 import ListPrices from './ListPrices'
 import Footer from './Footer'
+import { useState } from 'react'
 
 const Mainbody = () => {
 
@@ -58,6 +59,13 @@ const Mainbody = () => {
             des4: "Lorem ipsum.",
         },
     ]
+
+    const [features, setFeatures] = useState(content);
+
+    const changeContent = (item) => {
+        const res = features.map(curitem => (curitem.id === item.id) ?  item : curitem)
+        setFeatures(res);
+    }
 return(
     <div id={classes.mainbody}>
         <div id={classes.email}>
@@ -66,10 +74,10 @@ return(
             <button>Get Started</button>
         </div>
         <div id={classes.features}>
-            {content.map(item => <ListFeatures content={item} key={item.id}/>)}
+            {features.map(item => <ListFeatures content={item} key={item.id} change={changeContent}/>)}
         </div>
         <div id={classes.prices}>
-            {prices.map(item => <ListPrices content={item} key={item.id}/>)}
+            {prices.map(item => <ListPrices content={item} key={item.id} />)}
         </div>
         <div id={classes.footer}>
         <Footer /></div>
